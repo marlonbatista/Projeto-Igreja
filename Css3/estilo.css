@@ -1,0 +1,252 @@
+/*Limpando as formatações padrões*/
+/*O "*" significa tudo */
+*{
+	margin: 0;
+	padding: 0;
+}
+body{
+	background: #FE9A2E;
+	font-size: 1em;
+	margin: 0;
+	padding: 0;
+}
+/*
+**Layout**
+*/
+#menu1 {
+
+	text-align: right;
+	width: 100%;
+	height: 40px;
+	background-color: #222;
+	font-family: 'Arial',serif;
+
+}
+#menu1 ul{
+	list-style: none;
+	position: static;
+	
+	
+}
+
+#menu1 ul li{
+	width: 140px;
+	float: right;
+	
+}
+#menu1 a {
+	padding: 10px;
+	display: block;
+	text-decoration: none;
+	text-align: center;
+	background-color: #222;
+	color: #fff;
+	border-radius:15px;
+}
+#menu1 ul li:hover ul{
+	visibility: visible;
+
+}
+#menu1 a:hover{
+	background-color: #f4f4f4;
+	color: #555;
+}
+.menu{
+	width: 100%;
+	height: 40px;
+	background-color: #222;
+	font-family: 'Arial',serif;
+	
+	
+}
+.menu ul{
+	list-style: none;
+	position: static;
+	
+	
+}
+.menu ul li{
+	width: 170px;
+	float: left;
+	
+}
+.menu a {
+	padding: 10px;
+	display: block;
+	text-decoration: none;
+	text-align: center;
+	background-color: #222;
+	color: #fff;
+	border-radius:15px;
+}
+.menu ul ul{
+	position: absolute;
+	visibility: hidden;
+
+}
+.menu ul li:hover ul{
+	visibility: visible;
+
+}
+.menu a:hover{
+	background-color: #f4f4f4;
+	color: #555;
+}
+.menu ul ul li{
+	float: none;
+	border-bottom: 1px solid #ccc;
+}
+.menu ul ul li a{
+	background-color: #FF8000;
+
+}
+
+label[for="bt_menu"]{
+	padding: 10px;
+	background-color: #222;
+	color: #fff;
+	font-family: 'Arial';
+	text-align: center;
+	font-size: 25px;
+	cursor: pointer;
+	width: 20px;
+	height: 30px;
+}
+#bt_menu{
+	display: none;
+
+}
+label[for="bt_menu"]{
+	display: none;
+}
+
+/*
+**Layout de Links e Menu**
+*/
+
+/*
+**Parte responsivel**
+*/
+
+
+@media(max-width: 768px){
+	label[for="bt_menu"]
+	{
+		display: block;
+	}
+	#bt_menu:checked ~.menu{
+		margin-left: 0;
+	}
+	.menu{
+		margin-top: 5px;
+		margin-left: -100%;
+		transition: all .4s;
+		border-radius: .5;
+		display: block;
+		clear: both;
+	}
+	.menu ul li{
+		width: 100%;
+		float: none;
+	}
+	.menu ul ul{
+		position: static;
+		overflow: hidden;
+		max-height: 0;
+		transition: all .4s;
+	}
+	.menu ul li:hover ul{
+		height: auto;
+		max-height: 200px;
+	}
+	
+}
+
+/*
+**
+***Fim Layout de links**
+**
+*/
+/*
+**Logotipo
+*/
+#cabecalho{
+	width: auto;
+	background-color: #FFFFFF;
+	text-align: center;	
+}
+.logo{
+	width: 200px;
+	height: 175px;
+	background-image: url('Imagens/sublogo.png');
+	opacity: 100;
+}
+.sublogo{
+	width:auto;
+	
+}
+#sublogo img{
+	width: 100%;
+	height: 300px;
+	
+	text-align: center;
+	
+}
+
+/*
+**
+***Inicio da Configuração do corpo da página**
+**
+*/
+#area-principal{
+	width: 920px;
+	margin: 10px auto;
+	padding: 0px;
+	clear: both;
+
+}
+#area-postagens{
+	width:920px;
+	float: left; 
+}
+#rodape{
+	clear: both;
+	background: #CCC;
+	text-align: center;
+	padding: 15px;
+}
+.postagem{
+	padding: 20px;
+	margin-bottom: 20px;
+	background: white; 
+
+}
+
+.data-postagem{
+	font-size: 1.5em;
+	padding-bottom: 15px;
+	margin-bottom: 5px;
+	display: block;
+	text-align: right;
+}
+
+h2{
+	
+	color: #f7b600;
+	margin-bottom: 15px;
+	font-size: 2.5em;
+	text-align: center;
+
+}
+.img{
+	width: 620px;
+	text-align: center;
+	justify-content: center;
+	padding-left: 140px;
+}
+.txt{
+	font-size: 1.5em;
+	margin: 50px 150px;
+	text-align: justify;
+}
+
